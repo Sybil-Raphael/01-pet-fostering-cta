@@ -1,0 +1,151 @@
+/* Use a modern, easy-to-read font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the banner section with a background image and a light overlay */
+.cta-banner {
+  background-image: url('img/cta-bg.jpg');
+  background-size: cover;           /* Make the image cover the whole banner */
+  background-position: center;      /* Center the image */
+  position: relative;               /* Needed for overlay */
+  color: #ffffff;                   /* White text for contrast */
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  /* Add a light teal overlay using a simple trick for beginners */
+}
+
+/* Add a light overlay using a pseudo-element */
+.cta-banner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 206, 221, 0.6); /* Light teal with some transparency */
+  z-index: 1; /* Place the overlay below the text */
+}
+
+/* Make sure the text stays above the overlay */
+.cta-banner h1,
+.cta-banner p,
+.cta-banner .cta-button {
+  position: relative;
+  z-index: 2;
+}
+
+/* Make the main heading large and bold */
+.cta-banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Style the description text */
+.cta-banner p {
+  font-size: 1.2em;
+  margin-bottom: 35px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the call-to-action button */
+.cta-button {
+  background-color: #2e90e6; /* Bright blue button */
+  color: #ffffff; /* Dark blue text for contrast */
+  padding: 16px 36px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 6px; /* Rounded corners */
+  font-weight: bold;
+  display: inline-block;
+  /* Make the button stand out */
+  box-shadow: 0 2px 8px rgba(30, 61, 89, 0.15);
+  transition: background-color 0.2s;
+}
+
+/* Change button color when hovered */
+.cta-button:hover {
+  background-color: #2a83d2;
+  color: #1e3d59;
+}
+
+/* Simple site header at the top */
+.site-header {
+  background-color: #1e3d59; /* Dark blue for contrast */
+  color: #ffffff; /* White text */
+  text-align: center;
+  padding: 18px 0;
+  margin: 0;
+}
+
+/* Make the site name a bit larger */
+.site-header h2 {
+  margin: 0;
+  font-size: 1.7em;
+  letter-spacing: 2px;
+}
+
+/* Info section below the banner */
+.info-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto; /* Center the section on the page */
+  background-color: rgba(191, 244, 248, 0.6); /* Very light teal background */
+  border-radius: 8px;
+  padding: 24px 12px;
+  text-align: center; /* Center content for beginners */
+}
+
+/* Make the image and text appear side by side on large screens */
+.info-image {
+  width: 45%;
+  max-width: 220px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Info text styles */
+.info-text {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 4%;
+  text-align: left;
+}
+
+/* Make the main heading and description in the banner the same color as the site name background */
+.cta-banner h1,
+.cta-banner p {
+  color: #1e3d59; /* Same dark blue as .site-header background */
+  position: relative;
+  z-index: 2;
+  /* Keep these lines so text stays above overlay */
+}
+
+/* Add extra space at the end of the last section */
+.info-section:last-of-type {
+  margin-bottom: 40px; /* Adds space below the last info section */
+}
+
+/* Make sure it looks good on small screens */
+@media (max-width: 600px) {
+  .info-image,
+  .info-text {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+  .info-text {
+    margin-top: 18px;
+    text-align: center;
+  }
+}
