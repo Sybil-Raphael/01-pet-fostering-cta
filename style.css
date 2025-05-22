@@ -135,6 +135,16 @@ body {
   margin-bottom: 40px; /* Adds space below the last info section */
 }
 
+/* Contact banner at the bottom */
+.contact-banner {
+  background-color: #1e3d59; /* Same color as the site header */
+  color: #ffffff;            /* White text for contrast */
+  text-align: center;        /* Center the text */
+  padding: 14px 0;           /* Some space above and below the text */
+  font-size: 1em;            /* Normal font size */
+  margin-top: 30px;          /* Space above the contact banner */
+}
+
 /* Make sure it looks good on small screens */
 @media (max-width: 600px) {
   .info-image,
